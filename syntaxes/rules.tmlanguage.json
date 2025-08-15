@@ -1,0 +1,40 @@
+{
+    "scopeName": "source.rules",
+    "patterns": [
+        {
+            "match": "\\b(WHEN|THEN|RULE|NEXT)\\b",
+            "name": "keyword.control.rules"
+        },
+        {
+            "begin": "(?<=\\bWHEN\\b)[\\s\\S]*?",
+            "end": "\\b(THEN)\\b",
+            "beginCaptures": {
+                "0": { "name": "keyword.control.rules.then" }
+            },
+            "endCaptures": {
+                "0": { "name": "keyword.control.rules" }
+            },
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ]
+        },
+        {
+            "begin": "(?<=\\bTHEN\\b)[\\s\\S]*?",
+            "end": "\\b(WHEN|THEN|NEXT|RULE)\\b",
+            "beginCaptures": {
+                "0": { "name": "keyword.control.rules.then" }
+            },
+            "endCaptures": {
+                "0": { "name": "keyword.control.rules" }
+            },
+            "patterns": [
+                {
+                    "include": "source.js"
+                }
+            ]
+        }
+    ],
+    "fileTypes": ["rules"]
+}

@@ -1,0 +1,18 @@
+{
+    "comments": {
+        // Define comment syntax if applicable
+    },
+    "brackets": [
+        ["{", "}"] // Since you're using JavaScript within THEN blocks
+    ],
+    "autoClosingPairs": [
+        { "open": "{", "close": "}" },
+        { "open": "\"", "close": "\"" },
+        { "open": "'", "close": "'" }
+    ],
+    "surroundingPairs": [
+        { "open": "{", "close": "}" },
+        { "open": "\"", "close": "\"" }, 
+        { "open": "'", "close": "'" }
+    ]
+}
